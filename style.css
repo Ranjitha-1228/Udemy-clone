@@ -29,7 +29,7 @@ body{
     border-radius: 30px;
     width: 60%;
     display: flex;
- gap:10px;
+    gap:10px;
  align-items: center;
 
 
@@ -47,6 +47,9 @@ body{
     display: flex;
     gap:10px;
     align-items: center;
+}
+.navbar__s4{
+    display:none;
 }
 /* my learning */
 .mylearning
@@ -71,7 +74,7 @@ body{
     display: flex;
     padding: 10px;
     border-bottom: solid black 1px;
-        justify-content: space-around;
+    justify-content: space-around;
 }   
 .categories p{
     background-color: #A435F0;
@@ -90,14 +93,16 @@ body{
 
 }
 .sale-image img{
-    width:100%;
+    width:100%;  
+}
+.sale-image {
     position:relative;
 }
 .sale-image__offer{
     position: absolute;
     background-color: white;
-    border:solid black 3px;
-    top:200px;
+    border:solid black 2px;
+    top:10%;
     left:10%;
     padding: 2%;
     width:35%;
@@ -127,7 +132,9 @@ body{
     margin-top: 10px;
 }
 .course-card{
-    width:250px;
+       margin:10px;
+    flex-grow:1;
+    flex-basis:20%;
 }
 .course-card img{
    
@@ -180,4 +187,27 @@ body{
     justify-content: space-between;
     margin: 20px;
     align-items: center;
+}
+/* media queries */
+@media screen and (max-width:800px){
+    /* default 16px change  */
+body{
+    font-size:10px;
+}
+}
+@media  screen and (max-width:600px) {
+    .course-card{
+
+    flex-basis:40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
+    
 }
